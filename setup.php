@@ -10,5 +10,5 @@ try {
     $result = $client->setWebhook(getenv('BOT_URL'));
     echo "Success!\n";
 } catch (Exception $e) {
-    echo "Error: ". $e->getError() ."\n";
+    echo "Error: ". $e->getMessage() ."\n";
 }
