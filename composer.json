@@ -1,0 +1,14 @@
+{
+    "name": "kolyabres/viber_delivery_bot",
+    "description": "Bot checks delivery status from AliExpress",
+    "type": "project",
+    "require": {
+        "bogdaan/viber-bot-php": "^0.0.2"
+    },
+    "authors": [
+        {
+            "name": "kolyabres",
+            "email": "kolyabres@gmail.com"
+        }
+    ]
+}
