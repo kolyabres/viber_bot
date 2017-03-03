@@ -3,7 +3,8 @@
     "description": "Bot checks delivery status from AliExpress",
     "type": "project",
     "require": {
-        "bogdaan/viber-bot-php": "^0.0.2"
+        "bogdaan/viber-bot-php": "^0.0.2",
+        "vlucas/phpdotenv": "^2.4"
     },
     "authors": [
         {
