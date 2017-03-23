@@ -16,7 +16,7 @@ $bot
             ->setSender($botSender)
             ->setText("Enter your tracking number");
     })
-    ->onText('/*/', function ($event) use ($bot, $botSender) {
+    ->onText('/.*/', function ($event) use ($bot, $botSender) {
         $message = $event->getMessage()->getText();
         $bot->getClient()->sendMessage(
             (new \Viber\Api\Message\Text())
