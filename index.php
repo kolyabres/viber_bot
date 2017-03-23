@@ -5,7 +5,7 @@ use Viber\Bot;
 use Viber\Api\Sender;
 
 $botSender = new Sender([
-    'name' => 'Whois bot',
+    'name' => 'Packer',
 ]);
 
 $bot = new Bot(['token' => getenv('API_KEY')]);
