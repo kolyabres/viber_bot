@@ -14,16 +14,15 @@ $bot
     ->onConversation(function ($event) use ($bot, $botSender) {
         return (new \Viber\Api\Message\Text())
             ->setSender($botSender)
-            ->setText("Can i help you?");
+            ->setText("Enter your tracking number");
     })
-    ->onText('|whois .*|si', function ($event) use ($bot, $botSender) {
-        // это событие будет вызвано если пользователь пошлет сообщение
-        // которое совпадет с регулярным выражением
+    ->onText('*', function ($event) use ($bot, $botSender) {
+        $message = $event->getMessage()->getText();
         $bot->getClient()->sendMessage(
             (new \Viber\Api\Message\Text())
                 ->setSender($botSender)
                 ->setReceiver($event->getSender()->getId())
-                ->setText("I do not know )")
+                ->setText("Follow this link https://www.17track.net/en/externalcall?resultDetailsH=156&nums={$message}&fc=0 to see you order status")
         );
     })
     ->run();
