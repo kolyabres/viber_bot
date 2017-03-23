@@ -16,10 +16,11 @@ $bot->onConversation(function ($event) use ($bot, $botSender) {
         ->setText("Enter your tracking number");
 })->onText('/.*/', function ($event) use ($bot, $botSender) {
     $number = $event->getMessage()->getText();
+    $text = \App\Client::getOrderInfo($number);
     $message = (new \Viber\Api\Message\Text())
         ->setSender($botSender)
         ->setReceiver($event->getSender()->getId())
-        ->setText("Follow this link https://www.17track.net/en/externalcall?resultDetailsH=156&nums={$number}&fc=0 to see you order status");
+        ->setText($text);
 
     $bot->getClient()->sendMessage($message);
 

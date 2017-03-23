@@ -1,15 +1,20 @@
 {
-    "name": "kolyabres/viber_delivery_bot",
-    "description": "Bot checks delivery status from AliExpress",
-    "type": "project",
-    "require": {
-        "bogdaan/viber-bot-php": "^0.0.2",
-        "vlucas/phpdotenv": "^2.4"
-    },
-    "authors": [
-        {
-            "name": "kolyabres",
-            "email": "kolyabres@gmail.com"
-        }
-    ]
+  "name": "kolyabres/viber_delivery_bot",
+  "description": "Bot checks delivery status from AliExpress",
+  "type": "project",
+  "require": {
+    "bogdaan/viber-bot-php": "^0.0.2",
+    "vlucas/phpdotenv": "^2.4"
+  },
+  "authors": [
+    {
+      "name": "kolyabres",
+      "email": "kolyabres@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/"
+    }
+  }
 }
